@@ -23,8 +23,8 @@
    ```
 
    run 
-   # todo remove github pip 
    ```
+   # todo remove github pip 
    $ pip install git+https://github.com/smartmark-pro/pycorrector.git@feature-mucgecbart
    $ python run_correct_service.py
    ```
