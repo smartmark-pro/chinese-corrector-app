@@ -1,6 +1,9 @@
-# chinese correction app demo
+# 中文文本纠错应用
 
-### How to run it on your own machine
+### 在线地址
+[在线应用](https://chinese-corrector-app-78ehqwnabadjnigeaw2mzx.streamlit.app/)（可能会无法使用， 需要点击激活）
+
+### 本地部署
 
 1. Install the requirements
 
@@ -8,25 +11,21 @@
    $ pip install -r requirements.txt
    ```
 
-2. Run the app
-
+2. run corrector model service
+   
+   （注意修改自己的配置）
+   
+   .streamlit 
    ```
-   $ streamlit run streamlit_app.py
+   cp secrets.toml.example secrets.toml
    ```
-
-3. run corrector model service
-
-   .streamlit create file secrets.toml
+   run 模型服务
    ```
-   [remote]
-   algo_url="http://0.0.0.0:9045/app/corrector/v1/corrector" 
-   ```
-
-   run 
-   ```
-   # todo remove github pip 
-   $ pip install git+https://github.com/smartmark-pro/pycorrector.git@feature-mucgecbart
+   $ pip install pycorrector
    $ python run_correct_service.py
    ```
 
-
+3. Run the app
+   ```
+   $ streamlit run streamlit_app.py
+   ```
