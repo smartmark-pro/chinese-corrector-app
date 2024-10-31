@@ -21,7 +21,8 @@
    ```
    run 模型服务
    ```
-   $ pip install pycorrector
+   $ pip install -r model_requirements.txt
+   $ pip install git+https://github.com/smartmark-pro/pycorrector.git@feature-better-bart
    $ python run_correct_service.py
    ```
 
